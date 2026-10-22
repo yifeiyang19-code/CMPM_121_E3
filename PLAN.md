@@ -13,3 +13,7 @@ C: A gradient from orange-yellow to pink on the face; Draw a smile with Bezier c
 explored, in Branch C
 
 gradients are used on both cheeks. This uses pale peach to rose instead of orange-yellow.
+
+Final decision:
+C: A gradient from pale peach to rose on the face; Draw a smile with Bezier curves; Create a gentle atmosphere, this version was warmer and comparing to A, B, this is more acceptable to players. so it becomes the final version.
+A B are still on branch A and branch B
