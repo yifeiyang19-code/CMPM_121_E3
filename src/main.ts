@@ -1,11 +1,17 @@
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
+// @deno-types="./asset-url.d.ts"
+import glassesUrl from "./assets/glasses.drawio.svg?no-inline";
+
+// @deno-types="./asset-url.d.ts"
+import tieUrl from "./assets/tie.svg?no-inline";
+
 // The prototype grew inline. Keep it this way until the refactoring checkpoint.
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute("aria-label", "A neutral face wearing glasses and a tie");
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -16,6 +22,16 @@ head.setAttribute("fill", "#f3cf87");
 head.setAttribute("stroke", "#302c29");
 head.setAttribute("stroke-width", "4");
 face.append(head);
+
+// Attribution: glasses.drawio.svg — author: Yifei; drawn with draw.io / diagrams.net.
+const glasses = document.createElementNS("http://www.w3.org/2000/svg", "image");
+glasses.setAttribute("href", glassesUrl);
+glasses.setAttribute("x", "38");
+glasses.setAttribute("y", "62");
+glasses.setAttribute("width", "124");
+glasses.setAttribute("height", "40");
+glasses.setAttribute("preserveAspectRatio", "xMidYMid meet");
+face.append(glasses);
 
 const leftEye = document.createElementNS(
   "http://www.w3.org/2000/svg",
@@ -58,6 +74,16 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+// Attribution: tie.svg — author: Yifei; drawn with draw.io / diagrams.net.
+const tie = document.createElementNS("http://www.w3.org/2000/svg", "image");
+tie.setAttribute("href", tieUrl);
+tie.setAttribute("x", "78");
+tie.setAttribute("y", "142");
+tie.setAttribute("width", "44");
+tie.setAttribute("height", "56");
+tie.setAttribute("preserveAspectRatio", "xMidYMid meet");
+face.append(tie);
 
 portrait.append(face);
 
